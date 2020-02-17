@@ -1,0 +1,9 @@
+---
+applications:
+- name: Integration-Wechat
+  host: integrationwechat
+  path: target/WechatIntegration-1.0.war
+  services:
+  - mlsql
+ 
+ 

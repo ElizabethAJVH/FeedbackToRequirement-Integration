@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         id="WebApp_ID" version="3.1">
+
+    <resource-ref>
+        <res-ref-name>TenantContext</res-ref-name>
+        <res-type>com.sap.cloud.account.TenantContext</res-type>
+    </resource-ref>
+
+    <resource-ref>
+        <res-ref-name>connectivityConfiguration</res-ref-name>
+        <res-type>com.sap.core.connectivity.api.configuration.ConnectivityConfiguration</res-type>
+    </resource-ref>
+
+    <!--<servlet>-->
+        <!--<servlet-name>WeChatServlet</servlet-name>-->
+        <!--<servlet-class>com.sap.s4idea.rea.WeChatServlet</servlet-class>-->
+        <!--<init-param>-->
+            <!--<param-name>destination</param-name>-->
+            <!--<param-value>wechat</param-value>-->
+        <!--</init-param>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>WeChatServlet</servlet-name>-->
+        <!--<url-pattern>/wechat/*</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<servlet>-->
+    <!--<servlet-name>TwitterServlet</servlet-name>-->
+    <!--<servlet-class>com.sap.s4idea.rea.TwitterServlet</servlet-class>-->
+    <!--<init-param>-->
+    <!--<param-name>destination</param-name>-->
+    <!--<param-value>twitter</param-value>-->
+    <!--</init-param>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>TwitterServlet</servlet-name>-->
+    <!--<url-pattern>/twitter</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <servlet>
+        <servlet-name>InsightListener</servlet-name>
+        <servlet-class>com.sap.s4idea.rea.InsightListener</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>InsightListener</servlet-name>
+        <url-pattern>/InsightListener</url-pattern>
+    </servlet-mapping>
+</web-app>

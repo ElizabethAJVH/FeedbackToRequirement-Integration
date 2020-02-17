@@ -1,0 +1,9 @@
+---
+applications:
+- name: Integration-Twitter
+  host: integrationtwitter
+  path: target/TwitterIntegration-1.0.war
+  services:
+  - mlsql
+ 
+ 
